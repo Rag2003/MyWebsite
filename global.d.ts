@@ -1,0 +1,2 @@
+declare module 'codewonders-helpers';
+//
