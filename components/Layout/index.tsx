@@ -8,11 +8,11 @@ import React, {
   useState,
 } from 'react';
 import { ScoutBar } from 'scoutbar';
+import Image from 'next/image';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Navbar from '../Navbar';
 import AppContext from '../Utils/context';
-import { initGA, logPageView } from '../Utils/analytics';
 import Cursor from '../Cursor';
 import SkipToMain from '../A11y/skip-to-main';
 
@@ -27,10 +27,8 @@ const Layout: React.FC<PropsWithChildren<{
   const [skew, setSkew] = useState(10);
   const logPage = () => {
     if (!(window as any).GA_INITIALIZED) {
-      initGA();
       (window as any).GA_INITIALIZED = true;
     }
-    logPageView();
   };
 
   useEffect(() => {
@@ -42,7 +40,7 @@ const Layout: React.FC<PropsWithChildren<{
     <Main>
       <BodyStyling theme={theme} />
       <Head>
-        <title>{`${title} | Adenekan Wonderful | Codewonders`}</title>
+        <title>{`${title} | Raghuram Guddati `}</title>
         <meta
           name="msapplication-TileColor"
           content={`${theme ? '#000000' : '#FFFFFF'}`}
@@ -53,9 +51,10 @@ const Layout: React.FC<PropsWithChildren<{
       <Navbar />
       <BackLay title={title}>
         <h1 aria-hidden="true">
-          {title === 'Home' ? 'CW.' : title.concat('.')}
+          {title === 'Home' ? 'RG.' : title.concat('.')}
         </h1>
       </BackLay>
+      
       <Cursor />
       <ScoutBar actions={actions(setTheme)} brandColor="var(--cw)" />
       {!show && <>{children}</>}

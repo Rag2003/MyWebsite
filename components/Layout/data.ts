@@ -5,8 +5,6 @@ import {
   createScoutSection,
   createScoutPage,
 } from 'scoutbar';
-import ARTICLE_DATA from '../AppData/articles';
-import LENS_DATA from '../AppData/lens';
 import PROJECTS_DATA from '../AppData/projects';
 
 export const actions = (theme: () => void) => [
@@ -28,16 +26,16 @@ export const actions = (theme: () => void) => [
   }),
 
   createScoutSection({
-    label: 'About Adenekan Wonderful',
+    label: 'About Raghuram Guddati',
 
     children: [
       createScoutAction({
-        label: 'About Adenekan Wonderful',
+        label: 'About Raghuram Guddati',
         href: '/about',
         keyboardShortcut: ['a'],
       }),
       createScoutAction({
-        label: "Adenekan Wonderful's Reads",
+        label: "Raghuram Guddati's Reads",
         href: '/about#reads',
       }),
       createScoutAction({
@@ -52,7 +50,7 @@ export const actions = (theme: () => void) => [
   }),
 
   createScoutSection({
-    label: 'BY Codewonders',
+    label: 'Raghu',
 
     children: [
       createScoutPage({
@@ -60,29 +58,6 @@ export const actions = (theme: () => void) => [
         children: PROJECTS_DATA.map((project) =>
           createScoutAction({
             label: project.title,
-            href: project.link,
-            description: project.description,
-            icon: project.imageUrl,
-          })
-        ),
-      }),
-      createScoutPage({
-        label: 'Lens',
-        children: LENS_DATA.map((project) =>
-          createScoutAction({
-            label: project.title,
-            href: project.link,
-            description: project.description,
-            icon: project.imageUrl,
-          })
-        ),
-      }),
-      createScoutPage({
-        label: 'Articles',
-        children: ARTICLE_DATA.map((project) =>
-          createScoutAction({
-            label: project.title,
-            href: project.link,
             description: project.description,
             icon: project.imageUrl,
           })

@@ -104,18 +104,6 @@ const SideBarModal: React.FC<ISideBarModal> = ({
                       ))}
                     </p>
                   )}
-                  <h4>
-                    <Product /> Website
-                  </h4>
-                  <p>
-                    <a
-                      href={data.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {data.link}
-                    </a>
-                  </p>
 
                   {data.github && (
                     <>

@@ -1,10 +1,5 @@
-/* -------------------------------------------------------------------------- */
-/*                            External Dependencies                           */
-/* -------------------------------------------------------------------------- */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
-
-/* -------------------------- Internal Dependencies ------------------------- */
 import useIsMounted from '../Utils/useIsMounted';
 
 // Define Props type for CursorStyle component

@@ -506,4 +506,19 @@ export const Main = styled.main`
   background-attachment: fixed;
   background-size: 1px 101px;
   min-height: 100vh; */
+
+`;
+
+export const PageWrapper = styled.section`
+  .container {
+    padding-right: 300px;
+    padding-left: 40px;
+    margin-left: 1rem;
+    
+    @media (max-width: 768px) {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-left: 0;
+    }
+  }
 `;

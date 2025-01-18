@@ -1,21 +1,12 @@
-/* -------------------------------------------------------------------------- */
-/*                            External Dependencies                           */
-/* -------------------------------------------------------------------------- */
-
 import React from 'react';
 import { default as Img } from 'next/image';
-/* ----------------------------- Image PropTypes ---------------------------- */
+
 interface IImage {
   src: string;
   alt?: string;
   className?: string;
 }
 
-/* --------------------------- Image defaultProps --------------------------- */
-const defaultProps = {
-  alt: 'codewonders',
-  className: '',
-};
 
 const Image: React.FC<IImage> = ({ src, alt, className }) => (
   <Img
@@ -28,6 +19,6 @@ const Image: React.FC<IImage> = ({ src, alt, className }) => (
   />
 );
 
-Image.defaultProps = defaultProps;
+
 
 export default Image;

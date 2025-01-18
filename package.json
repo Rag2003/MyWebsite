@@ -1,11 +1,11 @@
 {
-  "name": "codewonders",
+  "name": "raghuram",
   "version": "1.5.0",
   "private": false,
   "license": "MIT",
-  "repository": "git://github.com/adenekan41/codewonders.git",
-  "description": "Adenekan Wonderful's Website",
-  "author": "Adenekan Wonderful <hellocodewonders@gmail.com> (https://codewonders.dev)",
+  "repository": "git://github.com/Rag2003/portfolio.git",
+  "description": "Raghuram's Website",
+  "author": "Raghuram Guddati <rguddati@iastate.edu>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,8 +18,10 @@
     "check-packages": "yarn clean && yarn compile && yarn test && yarn lint"
   },
   "dependencies": {
+    "@types/recharts": "^1.8.29",
     "codewonders-helpers": "^1.1.0",
     "framer-motion": "^10.12.12",
+    "lucide-react": "^0.469.0",
     "next": "13.4.2",
     "next-page-transitions": "^1.0.0-beta.2",
     "next-pwa": "^5.4.1",
@@ -28,7 +30,9 @@
     "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-progressive-image": "^0.6.0",
+    "recharts": "^2.15.0",
     "scoutbar": "^1.1.9",
+    "sharp": "^0.33.5",
     "styled-components": "^4.4.1",
     "url-loader": "^2.2.0"
   },
@@ -36,7 +40,7 @@
     "@types/react": "^18.2.6",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.1.3",
-    "eslint": "^6.8.0",
+    "eslint": "^9.18.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.20.0",

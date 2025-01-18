@@ -9,12 +9,10 @@ import styled from 'styled-components';
 
 import {
   IconRight,
-  Twitter,
   Facebook,
   Linkedin,
   Github,
   Instagram,
-  Dribble,
 } from '../Icons';
 
 /* ---------------------------- Style Dependency ---------------------------- */
@@ -45,17 +43,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://twitter.com/code_wonders"
-          aria-label="Go To Adenekan Wonderful Twitter Page"
-          title="Twitter Page"
-        >
-          <Twitter />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.facebook.com/AdenekanWonderful"
-          aria-label="Go To Adenekan Wonderful Facebook Page"
+          href="https://www.facebook.com/people/Raghuram-Guddati/pfbid02js7ZQ8rE6ZR2ChfPePj5GRXexxXSgfRG2nNTVu3bsbp2ron7MW559hQEAeFd1UMkl/"
+          aria-label="Go To Raghuram Guddati Facebook Page"
           title="Facebook Page"
         >
           <Facebook />
@@ -63,8 +52,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://linkedin.com/in/codewonders"
-          aria-label="Go To Adenekan Wonderful Linkedin Page"
+          href="https://www.linkedin.com/in/raghuram-guddati-922911260/"
+          aria-label="Go To Raghuram Guddati Linkedin Page"
           title="Linkedin Page"
         >
           <Linkedin />
@@ -72,8 +61,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/adenekan41"
-          aria-label="Go To Adenekan Wonderful Github Page"
+          href="https://github.com/Rag2003"
+          aria-label="Go To Raghuram Guddati Github Page"
           title="Github Page"
         >
           <Github />
@@ -81,17 +70,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://dribbble.com/codewonders"
-          aria-label="Go To Adenekan Wonderful Dribble Page"
-          title="Dribbble Page"
-        >
-          <Dribble />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://instagram.com/codewonders"
-          aria-label="Go To Adenekan Wonderful Instagram Page"
+          href="https://www.instagram.com/raghu_41414/"
+          aria-label="Go To Raghuram Guddati Instagram Page"
           title="Instagram Page"
         >
           <Instagram />

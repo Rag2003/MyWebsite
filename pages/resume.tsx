@@ -1,24 +1,11 @@
-/* -------------------------------------------------------------------------- */
-/*                            External Dependencies                           */
-/* -------------------------------------------------------------------------- */
-
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
-
-/* -------------------------- Internal Dependencies ------------------------- */
-
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 
 const Resume = () => {
-  const resumeData =
-    'https://www.canva.com/design/DAEEkidwA2Q/view?utm_content=DAEEkidwA2Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
-
-  const previewData = `${resumeData.substr(
-    0,
-    resumeData.lastIndexOf('/') + 1
-  )}view?embed`;
+  const googleDriveEmbedLink =
+    'https://drive.google.com/file/d/116y2vbwWqlRFeo5alQb9u9AROitMQ2YK/preview'; // Embed link for your Google Drive file.
 
   return (
     <Layout title="Resume">
@@ -29,15 +16,15 @@ const Resume = () => {
             <p>
               Reach out to me via my{' '}
               <b>
-                <Link href="/contact">contact page</Link>
+                <a href="/contact">contact page</a>
               </b>{' '}
-              .{' '}
+              or{' '}
               <b>
                 <a
-                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
+                  href="https://drive.google.com/file/d/116y2vbwWqlRFeo5alQb9u9AROitMQ2YK/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Go to Resumé Page"
+                  aria-label="View Resumé on Google Drive"
                 >
                   view
                 </a>
@@ -45,32 +32,30 @@ const Resume = () => {
               or{' '}
               <b>
                 <a
-                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
-                  target="_blank"
+                  href="https://drive.google.com/file/d/116y2vbwWqlRFeo5alQb9u9AROitMQ2YK/view?usp=sharing"
+                  download
                   rel="noopener noreferrer"
-                  aria-label="Go to Resumé Page"
+                  aria-label="Download Resumé from Google Drive"
                 >
                   download
                 </a>
               </b>{' '}
-              the resume{' '}
+              the resume.
             </p>
           </article>
           <br />
           <iframe
-            src={previewData}
+            src={googleDriveEmbedLink}
             allowFullScreen
             width="740"
             height="780"
-            title="Adenekan Wonderful Resumé"
+            title="Raghuram Guddati Resumé"
           />
         </PageSection>
         <br />
-        <br />
         <FooterLink goto="/contact" className="mt-3 mb-5">
-          Are you convinced to contact me now ?
+          Are you convinced to contact me now?
         </FooterLink>
-        <br />
       </PageWrapper>
     </Layout>
   );
@@ -91,14 +76,15 @@ const PageSection = styled.div`
     color: var(--article-color) !important;
   }
   iframe {
-    width: 100%;
-    filter: invert(var(--invert)) grayscale(calc(var(--invert) - 0.15));
-    border: none;
-    height: 44.5rem;
-    @media (min-width: 768px) {
-      width: 82.8% !important;
-      height: 70.4rem !important;
-    }
+  width: 100%;
+  height: 1000px; /* Adjusted height */
+  border: none;
+  @media (min-width: 768px) {
+    width: 95%; /* Center-aligned for larger screens */
+    height: 1085px; /* Increased height for better scaling */
   }
+}
+
+
 `;
 export default Resume;

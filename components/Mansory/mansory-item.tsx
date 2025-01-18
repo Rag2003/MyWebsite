@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { arrayRandomItem } from 'codewonders-helpers';
 import { useRouter, withRouter } from 'next/router';
+import Image from 'next/image';
 /* -------------------------- Internal Dependencies ------------------------- */
-import Image from '../Image';
 import SideBarModal from '../SidebarModal';
 
 /* -------------------------- MansoryItem PropTypes ------------------------- */
@@ -15,7 +15,6 @@ interface MansoryItemProps {
     title: string;
     description?: string;
     imageUrl: string;
-    link?: string;
     github?: string;
     about?: string;
     technologies?: string[];
@@ -31,7 +30,6 @@ const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
     <>
       {!pathname.includes('/projects') ? (
         <a
-          href={item.link}
           target="_blank"
           style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}
           rel="noopener noreferrer"
@@ -46,7 +44,13 @@ const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
             }}
             role="gridcell"
           >
-            <Image src={item.imageUrl} alt={item.imageUrl} />
+            <Image 
+            src={item.imageUrl} 
+            alt={item.title}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          />
             <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -69,7 +73,13 @@ const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
             }}
             tabIndex={0}
           >
-            <Image src={item.imageUrl} alt={item.imageUrl} />
+            <Image 
+              src={item.imageUrl} 
+              alt={item.title}
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
             <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
